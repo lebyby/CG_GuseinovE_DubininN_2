@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <title>Лабораторная работа по компьютерной графике №2</title>
+</head>
+<body>
+
+<div><span class="word">Формирование кубического сплайна для пространственных точек, соединенных ломаной</span></div>
+
+<div class="input_group">
+    <canvas id="canvasLine" style="background: url(image/back.jpg); border: 2px solid #ccc; margin:10px;" ></canvas>
+
+    <div class="table">
+        <div><p>Введите координаты точек:                                                       </p></div>
+        <div><p>(по X: от 0 до 1400)</p></div>
+        <div><p>(по Y: от 0 до 750)</p></div>
+        <form method="post" action="">
+            <table id="table" width="300" border="1" cellspacing="0" cellpadding="5">
+                <tr>
+                    <th scope="col">№</th>
+                    <th scope="col">X</th>
+                    <th scope="col">Y</th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td><input class="input_number" type="number" id="xPoint1" value="-1" min="0" max="1415" onchange="draw_line(ctx_F, xPoint1, yPoint1, xPoint2, yPoint2, xPoint3, yPoint3, xPoint4, yPoint4, xPoint5, yPoint5, xPoint6, yPoint6); "></td>
+                    <td><input class="input_number" type="number" id="yPoint1" value="-1" min="0" max="776" onchange="draw_line(ctx_F, xPoint1, yPoint1, xPoint2, yPoint2, xPoint3, yPoint3, xPoint4, yPoint4, xPoint5, yPoint5, xPoint6, yPoint6);" ></td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td><input class="input_number" type="number" id="xPoint2" value="-1" min="0" max="1415" onchange="draw_line(ctx_F, xPoint1, yPoint1, xPoint2, yPoint2, xPoint3, yPoint3, xPoint4, yPoint4, xPoint5, yPoint5, xPoint6, yPoint6);" ></td>
+                    <td><input class="input_number" type="number" id="yPoint2" value="-1" min="0" max="776" onchange="draw_line(ctx_F, xPoint1, yPoint1, xPoint2, yPoint2, xPoint3, yPoint3, xPoint4, yPoint4, xPoint5, yPoint5, xPoint6, yPoint6);" ></td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td><input class="input_number" type="number" id="xPoint3" value="-1" min="0" max="1415" onchange="draw_line(ctx_F, xPoint1, yPoint1, xPoint2, yPoint2, xPoint3, yPoint3, xPoint4, yPoint4, xPoint5, yPoint5, xPoint6, yPoint6);" ></td>
+                    <td><input class="input_number" type="number" id="yPoint3" value="-1" min="0" max="776" onchange="draw_line(ctx_F, xPoint1, yPoint1, xPoint2, yPoint2, xPoint3, yPoint3, xPoint4, yPoint4, xPoint5, yPoint5, xPoint6, yPoint6);" ></td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td><input class="input_number" type="number" id="xPoint4" value="-1" min="0" max="1415" onchange="draw_line(ctx_F, xPoint1, yPoint1, xPoint2, yPoint2, xPoint3, yPoint3, xPoint4, yPoint4, xPoint5, yPoint5, xPoint6, yPoint6);" ></td>
+                    <td><input class="input_number" type="number" id="yPoint4" value="-1" min="0" max="776" onchange="draw_line(ctx_F, xPoint1, yPoint1, xPoint2, yPoint2, xPoint3, yPoint3, xPoint4, yPoint4, xPoint5, yPoint5, xPoint6, yPoint6);" ></td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td><input class="input_number" type="number" id="xPoint5" value="-1" min="0" max="1415" onchange="draw_line(ctx_F, xPoint1, yPoint1, xPoint2, yPoint2, xPoint3, yPoint3, xPoint4, yPoint4, xPoint5, yPoint5, xPoint6, yPoint6);" ></td>
+                    <td><input class="input_number" type="number" id="yPoint5" value="-1" min="0" max="776" onchange="draw_line(ctx_F, xPoint1, yPoint1, xPoint2, yPoint2, xPoint3, yPoint3, xPoint4, yPoint4, xPoint5, yPoint5, xPoint6, yPoint6);" ></td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td><input class="input_number" type="number" id="xPoint6" value="-1" min="0" max="1415" onchange="draw_line(ctx_F, xPoint1, yPoint1, xPoint2, yPoint2, xPoint3, yPoint3, xPoint4, yPoint4, xPoint5, yPoint5, xPoint6, yPoint6);" ></td>
+                    <td><input class="input_number" type="number" id="yPoint6" value="-1" min="0" max="776" onchange="draw_line(ctx_F, xPoint1, yPoint1, xPoint2, yPoint2, xPoint3, yPoint3, xPoint4, yPoint4, xPoint5, yPoint5, xPoint6, yPoint6);" ></td>
+                </tr>
+
+            </table>
+            <br><br>
+
+        </form>
+    </div>
+</div>
+
+<div class="div_button"><input class="button" type="submit" id="submit" value="ПОСТРОИТЬ СПЛАЙН"/></div>
+
+<!-- Скрипт -->
+<script src="scripts/draw_line.js"></script>
+
+
+</body>
+</html>

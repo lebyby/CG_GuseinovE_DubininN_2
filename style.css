@@ -1,0 +1,77 @@
+@font-face {
+    font-family: JetBrainsMono Regular;
+    src:url(fonts/JetBrainsMono-Regular.ttf);
+}
+
+body{
+    font-family: JetBrainsMono Regular, sans-serif;
+    font-size: 20px;
+}
+
+.container{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+}
+
+
+.form-control {
+
+    font-family: JetBrainsMono Regular, sans-serif;
+    font-size: 20px;
+
+    text-align: center;
+
+    border: none;
+
+    background-color: transparent;
+    color: inherit;
+    outline: none;
+    margin-right: 10px;
+}
+
+.sidebar{
+    display: grid;
+    margin: 30px;
+}
+
+
+
+.word {
+    font-family: JetBrainsMono Regular, sans-serif;
+    flex-wrap: wrap;
+    margin: 150px;
+    font-size: 37px;
+
+}
+
+.input_group {
+    margin: 50px;
+}
+
+.table {
+    float: right;
+}
+
+.input_number {
+    font-family: JetBrainsMono Regular, sans-serif;
+    flex-wrap: wrap;
+    align-items: center;
+    font-size: 17px;
+}
+
+.button {
+
+    font-family: JetBrainsMono Regular, sans-serif;
+    flex-wrap: wrap;
+    font-size: 40px;
+    color: white;
+    background: #7F113E;
+    height: 75px;
+    width: 500px;
+    padding: 10px;
+    border: 1px solid #F5C4AB;
+}
+
+.div_button {
+    margin-left: 750px;
+}
